@@ -1,0 +1,171 @@
+/* Large Screens (Desktops & Laptops) */
+@media (min-width: 1200px) {
+    .tabs-underline{
+        width: 35rem !important;
+    }
+    .filter-btn {
+        display: none !important;
+    }
+
+  }
+  
+  /* Medium Screens (Tablets) */
+  @media (max-width: 992px) {
+    .tabs-underline{
+        width: 35rem !important;
+    }
+    .portolio-section {
+        margin: 2rem !important;
+    }
+   
+    .header{
+        padding-right:0 !important;
+    }
+    .search-box input{
+        width: 24rem !important;
+        padding: 1rem 1rem !important
+    }
+    .filter-btn {
+        display: none !important;
+    }
+  }
+  
+  /* Small Screens (Phones) */
+  @media (max-width: 768px) {
+    .tabs-underline{
+        width: 35rem !important;
+    }
+    .portolio-section {
+        margin: 2rem !important;
+    }
+    .navbar {
+        display: grid !important;
+        gap: 2rem;
+    }
+    .search-box input{
+        position: relative;
+        right: 4%;
+        width: 40rem !important;
+        padding: 1.3rem 1.5rem !important;
+    }
+    .search-icon {
+        right: 4rem;
+    }
+    .filter-btn {
+        display: none !important;
+    }
+    .card{
+        max-width: 90% !important;
+        margin: 1rem !important;
+        margin-left: 1.5rem !important;
+        max-height: 1.4rem;
+    }
+    .card-image {
+        width: 35% !important;
+    }
+    .card-container{
+        height: auto !important;
+    } 
+  }
+  
+  /* Extra Small Screens (Very Small Phones) */
+  @media (max-width: 576px) {
+    .app-container{
+        display: block !important;
+    }
+
+    .bottom-nav{
+        display: block;
+    }
+    .card-title{
+        font-size: 1.5rem !important;
+    }
+    .card-description {
+        display: none;
+    }
+    .card{
+        min-height: 12rem !important;
+        margin-left: 2rem !important;
+   }
+    .navbar{
+        padding: 0 !important;
+        margin-left: 1.5rem;
+    }
+   .sidebar {
+    display: none !important;
+   }
+   .header{
+    display: none !important;
+   }
+   .shopping-bag{
+    display: block !important;
+    position: fixed;
+    position: absolute;
+    right: -6%;
+    top: 6%;
+   }
+   .shopping-bag svg{
+    /* position: fixed !important; */
+    font-size: 2.5rem !important;
+    margin-right: 0.3rem !important;
+    margin-left: 1rem;
+
+   }
+   .portolio-section {
+    width: auto !important;
+    border-radius: 0 !important;
+    position: relative;
+    margin: 0 !important;
+    padding-top: 2rem !important;
+   }
+   .portolio-section h2{
+    font-size: 1.8rem !important;
+   }
+   .tabs{
+    margin: 1rem !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    gap: 5rem !important;
+
+   }
+   .tab.active{
+    color: #DF5532 !important;
+  } 
+   .tabs-underline {
+    transform: translate(-15%);
+    width: 62rem !important;
+   }
+   .search-box input{
+    width: 47rem !important;
+    margin-left: 1.9rem;
+   }
+   .search-icon {
+        margin-right:2rem;
+   }
+   .container  {
+    background-color: none !important;
+   }
+   .bottom-nav {
+    position: fixed;
+    bottom: 5.5rem; /* Adjust to sit above the bottom navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #DF5532;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.filter-btn i {
+    font-size: 1.6rem;
+}
+
+  }
+  

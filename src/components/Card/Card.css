@@ -1,0 +1,94 @@
+
+.card{
+    min-height: 16rem;
+    display: flex;
+    max-width: 75%;
+    background: white;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.9px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 2rem;
+    margin-top: 0.5rem;
+    }
+
+
+.card-image {
+    width: 30%;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Content Section  */
+.card-content {
+    width: 70%;
+    padding: 16px;
+    padding-bottom: 0 !important;
+}
+
+/* Title */
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #303030;
+}
+/* Description */
+.card-description {
+    font-size: 1.2rem;
+    color: #9E95A2;
+    font-weight: 500;
+    margin-top: 0.4rem;
+    line-height: 1.5;
+}
+/* Language & Author */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.3rem;
+    font-size: 1.2rem;
+   
+    position: relative;
+    left: -6px;
+}
+.language {
+    font-weight: 400;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+}
+
+.author {
+    margin-left: 0.8rem;
+    color:#9E95A2;
+}
+
+.bold-author-text{
+    color:#9E95A2;
+    font-weight: 500;
+}
+/* Button */
+.add-to-cart {
+    /* margin-top: 1.2rem; */
+    display: block;
+    margin-left:auto;
+    color: white;
+    border: none;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: smooth 0.3s ease-in-out;
+
+    position: relative;
+    top: -3.6rem;
+
+    background: rgb(243,149,25);
+background: linear-gradient(90deg, rgba(243,149,25,1) 0%, rgba(255,205,103,1) 100%);
+}
+
+.add-to-cart:hover {
+    background: rgb(243,149,25);
+    background: linear-gradient(90deg, rgba(255,205,103,1) 0%, rgba(243,149,25,1) 100%);
+}

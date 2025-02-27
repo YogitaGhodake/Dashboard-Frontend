@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    height: auto;   
+}
+li{
+    cursor: pointer;
+}
+a{  cursor: pointer;
+}
+.app-container{
+    display: grid;
+    grid-template-columns: 16fr 85fr;
+    background-color: #F5F5F5;
+}
+.content{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto ;
+}

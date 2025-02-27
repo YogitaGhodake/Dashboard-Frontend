@@ -1,0 +1,59 @@
+.sidebar {
+    background-color:#DF5532;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 9rem;
+    padding: 2.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: "Roboto", serif;
+    color: #fff;
+}
+
+.sidebar-menu {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.sidebar-menu a {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    font-family: "Roboto", serif;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.dashboard{
+    margin-left: 0.4rem;
+}
+
+.sidebar-menu a img {
+    font-size: 5rem;
+}
+
+.sidebar-menu a > svg {
+    font-size: 3rem;
+    margin-left: -0.4rem;
+}
+
+.active-portfolio{
+    /* width: 150%; */
+    height: 3.9rem;
+    border-radius: 5%;
+    background: rgb(255,173,152);
+background: linear-gradient(90deg, rgba(255,173,152,1) 0%, rgba(223,85,50,1) 100%);
+}
