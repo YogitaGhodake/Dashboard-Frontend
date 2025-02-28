@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    height: auto;   
+    height: auto;
+    overflow-x: hidden;   
 }
 li{
     cursor: pointer;

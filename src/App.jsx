@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 import "./App.css";
 import './media.css';
@@ -23,7 +22,7 @@ function App() {
       <div className="app-container">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Navigate to="/" />}></Route>
+          <Route path="/" element={<Dashboard />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/portfolio" element={<Dashboard />}></Route>
         </Routes>
