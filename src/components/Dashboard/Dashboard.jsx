@@ -11,6 +11,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
 import InputIcon from "@mui/icons-material/Input";
 import PersonIcon from '@mui/icons-material/Person';
+// import axios from 'axios';
+
 
 
 const Dashboard = () => {
@@ -29,7 +31,6 @@ const Dashboard = () => {
         );
         const data = await response.json();
 
-        // Transform API data into the required format
         const formattedData = data.data.map((item) => ({
           image: item.image?.formats?.medium?.url || item.image?.url || "",
           title: item.title,
@@ -39,6 +40,7 @@ const Dashboard = () => {
         }));
 
         setCardData(formattedData);
+        // setFilteredData(formattedData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -46,6 +48,11 @@ const Dashboard = () => {
 
     fetchData();
   }, []);
+
+
+
+
+
 
   return (
     <div className="main-container">
