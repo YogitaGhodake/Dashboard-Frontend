@@ -9,6 +9,8 @@ li{
 a{  cursor: pointer;
 }
 .app-container{
+    height: 100vh;
+    width: 100%;
     display: grid;
     grid-template-columns: 16fr 85fr;
     background-color: #F5F5F5;

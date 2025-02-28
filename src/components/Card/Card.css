@@ -87,6 +87,9 @@
     background: rgb(243,149,25);
 background: linear-gradient(90deg, rgba(243,149,25,1) 0%, rgba(255,205,103,1) 100%);
 }
+.add-to-cart-mobile-view{
+    display: none;
+}
 
 .add-to-cart:hover {
     background: rgb(243,149,25);

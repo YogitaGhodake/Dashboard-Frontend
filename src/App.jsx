@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import './media.css';
+import './components/Card/Card.css';
 import Dashboard from "./components/Dashboard/Dashboard";
 import Inputs from "./Pages/Inputs";
 import Profile from "./Pages/Profile";
@@ -22,7 +23,7 @@ function App() {
       <div className="app-container">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Navigate to="/dashboard" />}></Route>
+          <Route path="/" element={<Navigate to="/" />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/portfolio" element={<Dashboard />}></Route>
         </Routes>

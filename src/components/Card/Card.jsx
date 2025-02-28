@@ -25,6 +25,7 @@ const Card = ({image, title, description, language, author}) => {
             <span className="language">{language}</span>
             <span className="author"><span className="bold-author-text">{author}</span></span>
             <button className="add-to-cart">Add to Cart</button>
+            <button className="add-to-cart-mobile-view">A</button>
             </div>
 
         </div>

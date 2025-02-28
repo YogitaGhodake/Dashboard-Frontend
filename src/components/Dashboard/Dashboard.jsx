@@ -6,6 +6,12 @@ import Header from "../Header/Header";
 import Card from "../Card/Card";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import FilterListIcon from "@mui/icons-material/FilterList"; 
+import HomeIcon from "@mui/icons-material/Home";
+import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
+import InputIcon from "@mui/icons-material/Input";
+import PersonIcon from '@mui/icons-material/Person';
+
 
 const Dashboard = () => {
   const [cardData, setCardData] = useState([]);
@@ -73,25 +79,26 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
-      <button className="filter-btn">
-  <i className="icon-filter"></i> Filter
-</button>
-
+      <button className="bottom-filter-btn">
+        <FilterListIcon className="filter-icon" />
+        <span className="bottom-filter-text"> Filter</span>
+      </button>
+     
       <section className="bottom-nav">
-        <div className="nav-item active">
-          <i className="icon-home"></i>
+        <div className="bottom-nav-item">
+          <HomeIcon className="bottom-icon" />
           <span>Home</span>
         </div>
-        <div className="nav-item">
-          <i className="icon-portfolio"></i>
+        <div className="bottom-nav-item active">
+          <BusinessCenterSharpIcon className="bottom-icon" />
           <span>Portfolio</span>
         </div>
-        <div className="nav-item">
-          <i className="icon-input"></i>
+        <div className="bottom-nav-item">
+          <InputIcon className="bottom-icon" />
           <span>Input</span>
         </div>
-        <div className="nav-item">
-          <i className="icon-profile"></i>
+        <div className="bottom-nav-item">
+          <PersonIcon className="bottom-icon" />
           <span>Profile</span>
         </div>
       </section>
