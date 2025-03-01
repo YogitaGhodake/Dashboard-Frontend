@@ -1,8 +1,7 @@
 // import React from "react";
 import "./Sidebar.css";
 import logo from "../../assets/logo.png";
-// import dashboardIcon from "../../assets/Vector.svg";
-import DashboardIcon from "../../assets/Vector.svg";
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import CampaignRoundedIcon from "@mui/icons-material/CampaignRounded";
 import DesignServicesOutlinedIcon from "@mui/icons-material/DesignServicesOutlined";
 import ContactsIcon from "@mui/icons-material/Contacts";
@@ -17,10 +16,11 @@ const Sidebar = () => {
 
       <div className="sidebar-menu">
         <a>
-          <img src={DashboardIcon} className="icon" alt="Dashboard Icon" />
-          <span className="dashboard">Dashboard</span>
+          <DashboardIcon style={{ color: "white", fontSize:"2.5rem", marginRight:"0.4rem" }}/>        
+            Dashboard
         </a>
-        <a className="active-portfolio"><CampaignRoundedIcon style={{ color: "white" }} /> Portfolio
+        <a className="active-portfolio">
+          <CampaignRoundedIcon style={{ color: "white" }} /> Portfolio
         </a>
         <a>
           <DesignServicesOutlinedIcon style={{ color: "white" }} />

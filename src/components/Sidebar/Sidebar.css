@@ -1,6 +1,6 @@
 .sidebar {
     background-color:#DF5532;
-    min-height: 100%;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     row-gap: 9rem;
@@ -47,7 +47,7 @@
 
 .sidebar-menu a > svg {
     font-size: 3rem;
-    margin-left: -0.4rem;
+    margin-left: 0.4rem;
 }
 
 .active-portfolio{
