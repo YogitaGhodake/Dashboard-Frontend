@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef  } from "react";
 import { Search, Filter} from "lucide-react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./Navbar.css";
 
 
-const Navbar = () => {
+const Navbar = ({ setSearchQuery }) => {
   const [activeTab, setActiveTab] = useState("Project");
   const tabs = [
    {name:"Project",path: '/'},
@@ -22,7 +23,7 @@ const Navbar = () => {
 
 
   const updateUnderlinePosition = () => {
-    const index = tabs.indexOf(activeTab);
+    const index = tabs.findIndex((tab) => tab.name === activeTab);
     const tabElement = document.querySelectorAll(".tab")[index];
 
     if (underlineRef.current && tabElement) {
@@ -44,8 +45,8 @@ const Navbar = () => {
                 <Link
                   key={tab.name}
                   to={tab.path}
-                  className={`tab ${activeTab === tab ? "active" : ""}`}
-                  onClick={() => setActiveTab(tab)}
+                  className={`tab ${activeTab === tab.name ? "active" : ""}`}
+                  onClick={() => setActiveTab(tab.name)}
                 >
                   {tab.name}
                   {/* <div className={`tab-underline ${activeTab === tab ? "active-underline" : ""}`}></div> */}
@@ -63,13 +64,22 @@ const Navbar = () => {
             <span className="filter-text">Filter</span>
           </button>
           <div className="search-box">
-            <input type="text" placeholder="Search a project" />
-            <Search className="search-icon"></Search>
+            <input 
+            type="text" 
+            placeholder="Search a project" 
+            onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <Search className="search-icon" />
           </div>
         </div>
       </nav>
     </>
   );
+};
+
+
+Navbar.propTypes = {
+  setSearchQuery: PropTypes.func.isRequired,
 };
 
 export default Navbar;

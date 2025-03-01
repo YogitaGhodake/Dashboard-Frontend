@@ -14,17 +14,20 @@ import Saved from "./Pages/Saved";
 import Shared from "./Pages/Shared";
 import Achievement from "./Pages/Achievment";
 import Sidebar from "./components/Sidebar/Sidebar";
+import { useState } from "react";
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
   
   return (
     <Router>
       <div className="app-container">
         <Sidebar />
+        {/* <Navbar onSearch = {handleSearch}/> */}
         <Routes>
-          <Route path="/" element={<Dashboard />}></Route>
-          <Route path="/dashboard" element={<Dashboard />}></Route>
-          <Route path="/portfolio" element={<Dashboard />}></Route>
+          <Route path="/" element={<Dashboard  searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}></Route>
+          <Route path="/dashboard" element={<Dashboard searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}></Route>
+          <Route path="/portfolio" element={<Dashboard searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}></Route>
         </Routes>
 
         <div className="content">
@@ -41,6 +44,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

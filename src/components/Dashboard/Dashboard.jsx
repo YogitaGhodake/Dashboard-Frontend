@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import Sidebar from "../Sidebar/Sidebar";
 import "./Dashboard.css";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
@@ -11,12 +10,14 @@ import HomeIcon from "@mui/icons-material/Home";
 import BusinessCenterSharpIcon from '@mui/icons-material/BusinessCenterSharp';
 import InputIcon from "@mui/icons-material/Input";
 import PersonIcon from '@mui/icons-material/Person';
-// import axios from 'axios';
+import PropTypes from "prop-types";
 
 
 
-const Dashboard = () => {
+const Dashboard = ({searchQuery ,setSearchQuery}) => {
   const [cardData, setCardData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +41,7 @@ const Dashboard = () => {
         }));
 
         setCardData(formattedData);
-        // setFilteredData(formattedData);
+        setFilteredData(formattedData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -49,8 +50,20 @@ const Dashboard = () => {
     fetchData();
   }, []);
 
-
-
+  useEffect(() => {
+    if (!searchQuery) {
+      setFilteredData(cardData);
+    } else {
+      const lowercasedQuery = searchQuery.toLowerCase();
+      const filtered = cardData.filter(
+        (item) =>
+          item.title.toLowerCase().includes(lowercasedQuery) ||
+          item.author.toLowerCase().includes(lowercasedQuery) ||
+          item.language.toLowerCase().includes(lowercasedQuery)
+      );
+      setFilteredData(filtered);
+    }
+  }, [searchQuery, cardData]);
 
 
 
@@ -66,10 +79,10 @@ const Dashboard = () => {
               <NotificationsIcon style={{ color: "#DF5532" }} />
             </div>
 
-            <Navbar />
+            <Navbar setSearchQuery={setSearchQuery} />
             <div className="card-container">
-              {cardData.length > 0 ? (
-                cardData.map((item, index) => (
+              {filteredData.length > 0 ? (
+                filteredData.map((item, index) => (
                   <Card
                     key={index}
                     image={item.image}
@@ -80,7 +93,7 @@ const Dashboard = () => {
                   />
                 ))
               ) : (
-                <p>Loading...</p>
+                <p className="notfound">No results found.</p>
               )}
             </div>
           </div>
@@ -111,6 +124,11 @@ const Dashboard = () => {
       </section>
     </div>
   );
+};
+
+Dashboard.propTypes = {
+  searchQuery: PropTypes.string.isRequired,
+  setSearchQuery: PropTypes.func.isRequired,
 };
 
 export default Dashboard;
